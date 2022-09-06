@@ -13,11 +13,11 @@ C.repo_name = 'pebal'
 C.root_dir = os.path.realpath(".")
 
 """Data Dir and Weight Dir"""
-C.city_root_path = '../dataset/city_scape'  # path/to/your/city_scape
+C.city_root_path = '/home/user/datasets/pebal_data/final_dataset/city_scape'  # path/to/your/city_scape
 C.coco_root_path = '/media/yuyuan/Applications/pebal/coco'  # path/to/your/coco
-C.fishy_root_path = '/media/yuyuan/Applications/pebal/fishyscapes'  # path/to/your/fishy
+C.fishy_root_path = '/home/user/datasets/pebal_data/final_dataset/fishyscapes'  # path/to/your/fishy
 
-C.pebal_weight_path = os.path.join(C.root_dir, 'ckpts', 'pebal', 'best_ad_ckpt.pth')
+C.pebal_weight_path = os.path.join(C.root_dir, 'ckpts', 'pretrained_ckpts', 'best_ad_ckpt.pth')
 C.pretrained_weight_path = os.path.join(C.root_dir, 'ckpts', 'pretrained_ckpts', 'cityscapes_best.pth')
 
 """Network Config"""
@@ -79,7 +79,7 @@ C.upload_image_step = [0, int((C.num_train_imgs / C.batch_size) / 2)]
 C.wandb_online = True
 
 """Save Config"""
-C.saved_dir = os.path.join(C.root_dir, 'ckpts', C.experiment_name)
+# C.saved_dir = os.path.join(C.root_dir, 'ckpts', C.experiment_name)
 
-if not os.path.exists(C.saved_dir):
-    os.mkdir(C.saved_dir)
+# if not os.path.exists(C.saved_dir):
+#     os.mkdir(C.saved_dir)
